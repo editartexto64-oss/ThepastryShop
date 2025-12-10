@@ -1,0 +1,14 @@
+{
+    "name": "thepastryshop/peru",
+    "description": "Sistema web MVC para gestion de productos, pedidos, tracking y clientes",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    }
+}

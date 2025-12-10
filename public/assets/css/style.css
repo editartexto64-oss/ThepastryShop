@@ -1,0 +1,19 @@
+
+
+/* Estilos globales personalizados */
+body {
+    background-color: #fafafa;
+    font-family: "Inter", sans-serif;
+}
+
+.navbar-brand img {
+    height: 48px;
+}
+
+.card-producto {
+    transition: 0.2s;
+}
+
+.card-producto:hover {
+    transform: scale(1.02);
+}
