@@ -2,6 +2,10 @@ Options -Indexes
 
 RewriteEngine On
 
+RewriteBase /thepastryshop/public/
+
+RewriteRule ^([a-zA-Z0-9/_-]+)$ index.php?url=$1 [L,QSA]
+
 # Redirigir todo a index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
