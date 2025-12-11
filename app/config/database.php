@@ -2,7 +2,6 @@
 
 /**
  * Configuración de conexión a la base de datos usando PDO + Dotenv
- * Compatible con PHP 8+
  */
 
 use Dotenv\Dotenv;
