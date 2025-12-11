@@ -8,6 +8,8 @@
  * Variables esperadas:
  * $producto = datos del producto seleccionado
  */
+$title = $producto['nombre'] . " | ThePastryShop";
+$description = "Compra el pastel " . $producto['nombre'] . " por S/ " . $producto['precio'] . ". " . $producto['descripcion'];
 
 $title = $producto['nombre'] . " - The PastryShop";
 require_once __DIR__ . '/../layouts/header.php';
@@ -55,5 +57,21 @@ require_once __DIR__ . '/../layouts/header.php';
     </div>
 
 </div>
-
+<!-- Schema.org de producto -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "<?= $producto['nombre'] ?>",
+  "image": "<?= BASE_URL . 'public/uploads/' . $producto['imagen'] ?>",
+  "description": "<?= $producto['descripcion'] ?>",
+  "sku": "<?= $producto['id'] ?>",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "PEN",
+    "price": "<?= $producto['precio'] ?>",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
 <?php require_once __DIR__ . '/../layouts/footer.php'; ?>
